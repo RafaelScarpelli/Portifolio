@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfólio Rafael Scarpelli</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#home" data-i18n="nav-home">Início</a>
+            <a href="#projects" data-i18n="nav-projects">Projetos</a>
+            <a href="#skills" data-i18n="nav-skills">Habilidades</a>
+            <a href="#experience" data-i18n="nav-experience">Experiência</a>
+            <a href="#education" data-i18n="nav-education">Educação</a>
+            <a href="#contact" data-i18n="nav-contact">Contato</a>
+        </nav>
+
+        <div class="language-switcher">
+            <select id="language-select">
+                <option value="pt">Português</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+    </header>
+
+    <section id="home" class="container">
+        <img src="images/profile.png" alt="Foto de Perfil" class="profile-img">
+        <h1 data-i18n="home-title">Bem-vindo ao Meu Portfólio</h1>
+        <p data-i18n="home-description">
+            Olá! Sou Rafael Scarpelli, desenvolvedor de software com 3 anos de experiência em construção de produtos
+            digitais para diversos setores. Apaixonado por tecnologia, estou sempre buscando aprender e criar soluções
+            inovadoras.
+        </p>
+    </section>
+
+    <section id="projects" class="container">
+        <h2 data-i18n="projects-title">Projetos</h2>
+        <div class="projects-grid" id="projects-grid">
+            <!-- Projetos serão preenchidos via JavaScript -->
+        </div>
+    </section>
+
+    <section id="skills" class="container">
+        <h2 data-i18n="skills-title">Skills</h2>
+        <div class="skills-list">
+            <span class="skill">Java</span>
+            <span class="skill">Python</span>
+            <span class="skill">C#</span>
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">React</span>
+            <span class="skill">Git</span>
+        </div>
+    </section>
+
+    <section id="experience" class="container">
+        <h2 data-i18n="experience-title">Experiência Profissional</h2>
+        <div class="experience-item">
+            <h3 data-i18n="experience-job1-title">Desenvolvedor de Software - Onixx</h3>
+            <p data-i18n="experience-job1-dates">2025 - Presente</p>
+            <p data-i18n="experience-job1-description">
+                Desenvolvimento de aplicações web utilizando react.
+            </p>
+        </div>
+    </section>
+
+    <section id="education" class="container">
+        <h2 data-i18n="education-title">Educação</h2>
+        <div class="education-item">
+            <h3 data-i18n="education-degree1-title">Bacharelado em Engenharia de Software</h3>
+            <p data-i18n="education-degree1-institution">Instituto Federal - Campus Paranavaí</p>
+            <p data-i18n="education-degree1-dates">2023 - 2026</p>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2 data-i18n="contact-title">Contato</h2>
+        <p data-i18n="contact-info">
+            E-mail: rafael.scarpelli@example.com | Telefone: (44) 99999-9999 |
+            <a href="https://github.com/RafaelScarpelli" target="_blank">GitHub</a> |
+            <a href="https://linkedin.com/in/rafaelscarpelli" target="_blank">LinkedIn</a>
+        </p>
+        <form class="contact-form" onsubmit="alert('Formulário enviado!'); return false;">
+            <label for="name" data-i18n="contact-form-name">Nome:</label>
+            <input type="text" id="name" required>
+            <label for="email" data-i18n="contact-form-email">E-mail:</label>
+            <input type="email" id="email" required>
+            <label for="message" data-i18n="contact-form-message">Mensagem:</label>
+            <textarea id="message" rows="5" required></textarea>
+            <button type="submit" data-i18n="contact-form-submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p data-i18n="footer">© 2025 Rafael Scarpelli. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
