@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
         "chess-system-java"
     ];
 
-    // Carrega o arquivo de tradução
     fetch('traducao.json')
         .then(response => response.json())
         .then(data => {
@@ -23,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Erro ao carregar traduções:', error);
         });
 
-    // Aplica a tradução
     function applyTranslations(lang) {
         const elements = document.querySelectorAll('[data-i18n]');
         elements.forEach(el => {
@@ -34,13 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Atualiza o idioma quando o usuário muda
     languageSelect.addEventListener('change', (e) => {
         currentLang = e.target.value;
         applyTranslations(currentLang);
     });
 
-    // Carrega projetos do GitHub
     function loadProjects() {
         repositories.forEach(repo => {
             fetch(`https://api.github.com/repos/RafaelScarpelli/${repo}`)
@@ -79,4 +75,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
         });
     }
+
+    document.getElementById("whatsapp-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        const name = document.getElementById("name").value;
+        const message = document.getElementById("message").value;
+        const text = `Olá, meu nome é ${name}. ${message}`;
+        const whatsappUrl = `https://api.whatsapp.com/send?phone=5544997635718&text=${encodeURIComponent(text)}`;
+        window.open(whatsappUrl, '_blank');
+    });
 });
